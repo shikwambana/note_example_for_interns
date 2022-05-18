@@ -1,0 +1,10 @@
+<mat-form-field class="example-full-width" appearance="outline">
+  <mat-label>Leave a comment</mat-label>
+  <textarea matInput [(ngModel)]="note" placeholder="Ex. It makes me feel..."></textarea>
+</mat-form-field>
+<!-- <p>{{note}}</p> -->
+<button mat-raised-button color="accent" (click)="submit()">Submit</button>
+
+<div>
+  <p *ngFor="let note of notes">{{note['record']['note']}}</p>
+</div>
