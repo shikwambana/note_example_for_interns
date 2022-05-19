@@ -23,4 +23,8 @@ export class StoreService {
   getNotes(){
     return this.http.get('https://collect2.com/api/ebd2d5bc-f69f-4d68-94ee-fca80fee467e/datarecord/')
   }
+
+  getChcukJokes(){
+    return this.http.get('https://api.chucknorris.io/jokes/random')
+  }
 }

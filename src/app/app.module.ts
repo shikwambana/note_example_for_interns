@@ -10,9 +10,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { HomComponent } from './hom/hom.component';
+import { JokesComponent } from './jokes/jokes.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
+  declarations: [AppComponent, MainComponent, HomeComponent, HomComponent, JokesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

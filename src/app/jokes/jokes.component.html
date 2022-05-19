@@ -1,0 +1,5 @@
+<h3>Chuck Norris Jokes</h3>
+<div *ngIf="jokes">
+  <p>{{ jokes["value"] }}</p>
+</div>
+<button (click)="getJokes()" mat-button>Get jokes</button>
