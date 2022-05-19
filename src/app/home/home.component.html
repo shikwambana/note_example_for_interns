@@ -1,4 +1,5 @@
 <h1>My Notes and Jokes</h1>
-
+<p>{{myName}}</p>
+<app-child (newItemEvent)="saveName($event)"></app-child>
 <button mat-button routerLink="notes">Notes</button>
 <button mat-button routerLink="jokes">Jokes</button>

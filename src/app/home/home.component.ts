@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  myName: string = ''
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  saveName(name : string){
+    this.myName = name;
   }
 
 }

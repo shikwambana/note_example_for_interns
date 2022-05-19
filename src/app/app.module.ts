@@ -13,9 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { HomComponent } from './hom/hom.component';
 import { JokesComponent } from './jokes/jokes.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, HomeComponent, HomComponent, JokesComponent],
+  declarations: [AppComponent, MainComponent, HomeComponent, HomComponent, JokesComponent, ChildComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
