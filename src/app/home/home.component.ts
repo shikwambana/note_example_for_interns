@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   myName: string = ''
+  answerInHome!: boolean;
 
   showQuestion = {
     gender: true,
@@ -20,6 +21,12 @@ export class HomeComponent implements OnInit {
     gender: true,
     employed: true,
     over18: true
+  }
+
+  genericQuestions = {
+    question: "",
+    trueAnswer: "",
+    falseAnswer: "",
   }
 
   genderQ = {
@@ -43,6 +50,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.genericQuestions = this.genderQ
   }
 
   saveName(name : string){
@@ -65,13 +73,13 @@ export class HomeComponent implements OnInit {
   }
 
   goNext(){
+    
 
-    if(this.showQuestion.gender){
-      this.showQuestion.employed = true;
-      this.showQuestion.gender = false;
-    }else if(this.showQuestion.employed){
-      this.showQuestion.employed = false;
-      this.showQuestion.over18 = true;
+    if(this.genericQuestions == this.genderQ){
+      this.genericQuestions = this.employmentQ
+    }else if(this.genericQuestions == this.employmentQ){
+      this.genericQuestions = this.ageQ
+
     }else if(this.showQuestion.over18){
       this.showQuestion.showAnswer = true;
       this.showQuestion.over18 = false;

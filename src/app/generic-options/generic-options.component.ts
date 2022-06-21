@@ -14,7 +14,7 @@ export class GenericOptionsComponent implements OnInit {
     trueAnswer: "",
     falseAnswer: "",
   }
-  answer = true;
+  answer!: boolean;
 
   constructor() { }
 

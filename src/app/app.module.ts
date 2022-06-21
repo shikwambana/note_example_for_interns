@@ -20,6 +20,7 @@ import { ChildComponent } from './child/child.component';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { GenericOptionsComponent } from './generic-options/generic-options.component';
+import { OneOptionComponent } from './one-option/one-option.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCiqa1cFqrubiUAeMKEW3hg1r73XnawMIs",
@@ -36,7 +37,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, HomeComponent, HomComponent, JokesComponent, ChildComponent, GenericOptionsComponent],
+  declarations: [AppComponent, MainComponent, HomeComponent, HomComponent, JokesComponent, ChildComponent, GenericOptionsComponent, OneOptionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

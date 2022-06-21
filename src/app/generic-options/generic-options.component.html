@@ -3,7 +3,7 @@
     {{ optionObject.question }} 
   </div>
   <div>
-    <mat-radio-group aria-label="Select an option" (change)="emitAnswer($event.value)">
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="answer" (change)="emitAnswer($event.value)">
       <div fxLayout="row" fxLayoutGap="10px">
         <div>
           <mat-radio-button [value]="true">{{

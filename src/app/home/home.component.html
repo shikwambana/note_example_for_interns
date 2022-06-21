@@ -5,22 +5,9 @@
 <app-child (newItemEvent)="saveName($event)"></app-child>
 <div *ngIf="showQuestion.gender">
   <app-generic-options
-    [optionObject]="genderQ"
-    (response)="saveGender($event)"
-  ></app-generic-options>
-  <button mat-button (click)="goNext()">Next</button>
-</div>
-<div *ngIf="showQuestion.employed">
-  <app-generic-options
-    [optionObject]="employmentQ"
-    (response)="saveEmp($event)"
-  ></app-generic-options>
-  <button mat-button (click)="goNext()">Next</button>
-</div>
-<div *ngIf="showQuestion.over18">
-  <app-generic-options
-    [optionObject]="ageQ"
-    (response)="saveAge($event)"
+    [optionObject]="genericQuestions"
+    [answer]="answerInHome"
+    (response)="saveGender($event)" []
   ></app-generic-options>
   <button mat-button (click)="goNext()">Next</button>
 </div>
