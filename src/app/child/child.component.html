@@ -1,5 +1,5 @@
 <div style="background-color: burlywood;">
-    <input type="text" [(ngModel)]="name">
+    <input type="text" [(ngModel)]="name" (focusout)="addNewItem()">
     <button (click)="addNewItem()" mat-button>Submit</button>
     <p>{{name}}</p>
 </div>

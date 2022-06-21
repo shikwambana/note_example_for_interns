@@ -1,5 +1,34 @@
 <h1>My Notes and Jokes</h1>
-<p>{{myName}}</p>
-<app-child (newItemEvent)="saveName($event)"></app-child>
+<p>{{ myName }}</p>
 <button mat-button routerLink="notes">Notes</button>
 <button mat-button routerLink="jokes">Jokes</button>
+<app-child (newItemEvent)="saveName($event)"></app-child>
+<div *ngIf="showQuestion.gender">
+  <app-generic-options
+    [optionObject]="genderQ"
+    (response)="saveGender($event)"
+  ></app-generic-options>
+  <button mat-button (click)="goNext()">Next</button>
+</div>
+<div *ngIf="showQuestion.employed">
+  <app-generic-options
+    [optionObject]="employmentQ"
+    (response)="saveEmp($event)"
+  ></app-generic-options>
+  <button mat-button (click)="goNext()">Next</button>
+</div>
+<div *ngIf="showQuestion.over18">
+  <app-generic-options
+    [optionObject]="ageQ"
+    (response)="saveAge($event)"
+  ></app-generic-options>
+  <button mat-button (click)="goNext()">Next</button>
+</div>
+
+<div *ngIf="showQuestion.showAnswer">
+  <h3>Your Info</h3>
+  <p>
+    Gender: <span *ngIf="myAnswers.gender">Male</span>
+    <span *ngIf="!myAnswers.gender">Female</span>
+  </p>
+</div>

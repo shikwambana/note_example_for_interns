@@ -1,0 +1,21 @@
+<div class="container"  fxLayout="column" fxLayoutGap="10px">
+  <div>
+    {{ optionObject.question }} 
+  </div>
+  <div>
+    <mat-radio-group aria-label="Select an option" (change)="emitAnswer($event.value)">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <div>
+          <mat-radio-button [value]="true">{{
+            optionObject.trueAnswer
+          }}</mat-radio-button>
+        </div>
+        <div>
+          <mat-radio-button [value]="false">{{
+            optionObject.falseAnswer
+          }}</mat-radio-button>
+        </div>
+      </div>
+    </mat-radio-group>
+  </div>
+</div>
